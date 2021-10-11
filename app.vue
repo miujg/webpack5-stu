@@ -1,3 +1,11 @@
 <template>
-  <h1>111</h1>
+    <test />
 </template>
+
+<script>
+import Test from  './test.md'
+console.log(Test)
+export default {
+  components: {Test}
+};
+</script>

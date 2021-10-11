@@ -21,13 +21,13 @@ module.exports = {
           path.resolve(__dirname, './md-loader/index.js')
         ]
       },
-      // {
-      //   test: /\.vue$$/,
-      //   use: [
-      //     'vue-loader',
-      //     path.resolve(__dirname, './md-loader/index.js')
-      //   ]
-      // },
+      {
+        test: /\.vue$$/,
+        use: [
+          'vue-loader',
+          // path.resolve(__dirname, './md-loader/index.js')
+        ]
+      },
     ]
   }
 }
