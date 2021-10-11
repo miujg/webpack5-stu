@@ -1,0 +1,28 @@
+{
+  "name": "webpack5-stu",
+  "version": "1.0.0",
+  "description": "webpack5 student",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miujg/webpack5-stu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miujg/webpack5-stu/issues"
+  },
+  "homepage": "https://github.com/miujg/webpack5-stu#readme",
+  "devDependencies": {
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.5.5",
+    "webpack": "4.42.0",
+    "webpack-cli": "3.3.11"
+  },
+  "dependencies": {
+    "vue": "2.5.5"
+  }
+}
