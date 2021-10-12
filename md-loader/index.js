@@ -1,6 +1,13 @@
-module.exports = source => {
+const loaderUtils = require('loader-utils')
+module.exports = function(source) {
+  const options = loaderUtils.getOptions(this) || {}
   console.log('~~~~~~~~~~~~~~~~')
-  console.log(source)
+  console.log(JSON.stringify(options))
+  // console.log(source)
   console.log('~~~~~~~~~~~~~~~~')
-  return `${source}`
+  // return `${source}`
+  const loaderContext = this;
+  console.log('xxxxxx', loaderContext.resourcePath)
+  this.callback(null, `${source}`)
 }
+

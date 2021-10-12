@@ -2,7 +2,6 @@ const path = require('path')
 const {VueLoaderPlugin} = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-/** @type { import('webpack').Configuration } */
 module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, './src/main.js'),
@@ -18,18 +17,20 @@ module.exports = {
   ],
   module: {
     rules: [
+      // {
+      //   test: /\.md$$/,
+      //   use: [
+      //     'vue-loader',
+      //     {
+      //       loader: path.resolve(__dirname, './md-loader/index.js'),
+      //     }
+          
+      //   ]
+      // },
       {
-        test: /\.md$$/,
+        test: /\.vue$/,
         use: [
           'vue-loader',
-          path.resolve(__dirname, './md-loader/index.js')
-        ]
-      },
-      {
-        test: /\.vue$$/,
-        use: [
-          'vue-loader',
-          // path.resolve(__dirname, './md-loader/index.js')
         ]
       },
     ]

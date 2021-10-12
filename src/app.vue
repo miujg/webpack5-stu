@@ -1,11 +1,3 @@
 <template>
-    <test />
+  <h1>xxx</h1>  
 </template>
-
-<script>
-import Test from  './test.md'
-console.log(Test)
-export default {
-  components: {Test}
-};
-</script>
