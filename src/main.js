@@ -23,7 +23,7 @@ const code = `
 
   :::demo 没有边框和背景色的按钮。
   \`\`\`html
-  <h1>xxxx</h1>
+  <h1>{{name}}</h1>
 
   <script>
   export default {
@@ -41,11 +41,3 @@ const code = `
 
 let result = md2vue(code)
 console.log(result)
-
-mount(result)
-
-
-
-
-
-

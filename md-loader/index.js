@@ -17,7 +17,7 @@ module.exports = function(source) {
 
   let commentStart = content.indexOf(startTag)
   let commentEnd = content.indexOf(endTag, commentStart + startTagLen)
-  while (commentStart !== -1 && commentEnd !== -1 && id < 3) {
+  while (commentStart !== -1 && commentEnd !== -1) {
     output.push(content.slice(start, commentStart))
 
     const commentContent = content.slice(commentStart + startTagLen, commentEnd)
@@ -49,6 +49,8 @@ module.exports = function(source) {
     start = content.indexOf('</script>') + '</script>'.length;
     pageScript = content.slice(0, start);
   }
+
+  output.push(content.slice(start));
 
   return `
     <template>

@@ -14,7 +14,6 @@ function stripScript(content) {
 function genInlineComponentText(html, script, source) {
   const {descriptor} = parse(source)
   const scriptStr = compileScript(descriptor, {id: 'xxx'})
-  debugger
   const compiled = compileTemplate(descriptor)
   script = script.trim()
   if (script) {
