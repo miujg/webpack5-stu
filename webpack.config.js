@@ -16,17 +16,18 @@ module.exports = {
     })
   ],
   module: {
+    unknownContextCritical: false,
     rules: [
-      // {
-      //   test: /\.md$$/,
-      //   use: [
-      //     'vue-loader',
-      //     {
-      //       loader: path.resolve(__dirname, './md-loader/index.js'),
-      //     }
+      {
+        test: /\.md$$/,
+        use: [
+          'vue-loader',
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js'),
+          }
           
-      //   ]
-      // },
+        ]
+      },
       {
         test: /\.vue$/,
         use: [
@@ -34,6 +35,12 @@ module.exports = {
         ]
       },
     ]
+  },
+  resolve: {
+    fallback: {
+      "path": false,
+      "stream": false
+    }
   },
   devServer: {
     hot: true,

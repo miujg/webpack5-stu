@@ -8,17 +8,44 @@
 
 import { createApp } from 'vue'
 import App from './app.vue'
+// import App from './test.md'
 const app = createApp(App)
 app.mount('#app')
 
-// import test from './test.md'
-// console.log(test)
 
-// import app from './app.vue'
-// console.log(app)
+// 1. md => html markdown-it
+// import App from './app.vue'
+// console.log(App)
 
-// "webpack": "4.42.0",
-// "webpack-cli": "3.3.11"
+const md2vue = require('../md-loader/index.js')
+const code = `
+  ### 按钮1
+
+  :::demo 没有边框和背景色的按钮。
+  \`\`\`html
+  <h1>xxxx</h1>
+
+  <script>
+  export default {
+    setup() {
+      const name = ref('jgmiu')
+      return {
+        name
+      }
+    },
+  }
+  </script>
+  \`\`\`
+  :::
+`
+
+let result = md2vue(code)
+console.log(result)
+
+mount(result)
 
 
-// console.log('xx')
+
+
+
+
