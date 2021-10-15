@@ -13,7 +13,6 @@ function stripScript(content) {
 // 生成内置组件字符串
 function genInlineComponentText(html, script, source) {
   const {descriptor} = parse(source)
-  const scriptStr = compileScript(descriptor, {id: 'xxx'})
   const compiled = compileTemplate(descriptor)
   script = script.trim()
   if (script) {
@@ -22,13 +21,22 @@ function genInlineComponentText(html, script, source) {
     script = 'const democomponentExport = {}';
   }
   return `(function(){
-    ${compiled.code}
+    ${formatCode(compiled.code)}
     ${script}
     return {
-      render
+      render,
+      ...democomponentExport
     }
   })()`
 }
+
+// 格式化code
+function formatCode(code) {
+  const tag = 'export'
+  const tagLen = tag.length
+  const start = code.indexOf(tag)
+  return code.slice(start + tagLen)
+} 
 
 module.exports = {
   stripTemplate,

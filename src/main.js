@@ -7,8 +7,8 @@
 
 
 import { createApp } from 'vue'
-import App from './app.vue'
-// import App from './test.md'
+// import App from './app.vue'
+import App from './test.md'
 const app = createApp(App)
 app.mount('#app')
 
@@ -17,27 +17,27 @@ app.mount('#app')
 // import App from './app.vue'
 // console.log(App)
 
-const md2vue = require('../md-loader/index.js')
-const code = `
-  ### 按钮1
+// const md2vue = require('../md-loader/index.js')
+// const code = `
+//   ### 按钮1
 
-  :::demo 没有边框和背景色的按钮。
-  \`\`\`html
-  <h1>{{name}}</h1>
+//   :::demo 没有边框和背景色的按钮。
+//   \`\`\`html
+//   <h1>{{name}}</h1>
 
-  <script>
-  export default {
-    setup() {
-      const name = ref('jgmiu')
-      return {
-        name
-      }
-    },
-  }
-  </script>
-  \`\`\`
-  :::
-`
+//   <script>
+//   export default {
+//     setup() {
+//       const name = ref('jgmiu')
+//       return {
+//         name
+//       }
+//     },
+//   }
+//   </script>
+//   \`\`\`
+//   :::
+// `
 
-let result = md2vue(code)
-console.log(result)
+// let result = md2vue(code)
+// console.log(result)
