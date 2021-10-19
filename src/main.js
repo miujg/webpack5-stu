@@ -12,7 +12,7 @@ import App from './test.md'
 const app = createApp(App)
 app.mount('#app')
 
-
+// "vue-loader": "^16.5.0",
 // 1. md => html markdown-it
 // import App from './app.vue'
 // console.log(App)
