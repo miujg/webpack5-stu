@@ -19,13 +19,19 @@ module.exports = {
     unknownContextCritical: false,
     rules: [
       {
-        test: /\.md$$/,
+        test: /\.md$/,
         use: [
           'vue-loader',
           {
             loader: path.resolve(__dirname, './md-loader/index.js'),
           }
           
+        ]
+      },
+      {
+        test: /\.(css|scss|sass)$/,
+        use: [
+          'style-loader', 'css-loader', 'sass-loader'
         ]
       },
       {
