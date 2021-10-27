@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// import DemoBlock from './DemoBlock.vue'
+import DemoBlock from './DemoBlock.vue'
 import Test from './test.md'
 export default {
   components: { Test },

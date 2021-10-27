@@ -71,6 +71,12 @@ export default defineComponent({
     height: 0;
     .box {
       display: inline-block;
+      width: 100%;
+      pre {
+        padding-left: 10px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+      }
     }
     .description {
       color: #666;

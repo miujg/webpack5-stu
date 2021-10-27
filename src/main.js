@@ -1,9 +1,19 @@
 import { createApp } from 'vue'
 // import App from './app.vue'
+import hljs from 'highlight.js'
 import 'highlight.js/styles/default.css'
+
 import App from './app.vue'
 import DemoBlock from './DemoBlock.vue'
 const app = createApp(App)
+
+// 定义pre指令
+app.directive('highlight', {
+  mounted(el) {
+    hljs.highlightBlock(el)
+  }
+})
+
 
 // 注册demo-block全局组件
 app.component('demo-block', DemoBlock)
